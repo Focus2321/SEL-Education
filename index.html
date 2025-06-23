@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEL Education</title>
+<style>
+/*****  COLOUR PALETTE  *****/
+:root{
+  --brand-1:#5a7dbe;      /* steel blue */
+  --brand-2:#ff9f53;      /* warm orange */
+  --brand-3:#fef9f4;      /* pale peach */
+  --brand-4:#f4fafb;      /* minty white */
+  --text:#333;
+  --card-bg:#fff;
+}
+
+/*****  RESET  *****/
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Segoe UI",sans-serif;
+  background:#fff;
+  color:var(--text);
+  line-height:1.6;
+}
+
+/*****  NAV  *****/
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:#fff;
+  border-bottom:1px solid #e5e5e5;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:.75rem 1.25rem;
+}
+nav .logo{font-weight:700;color:var(--brand-1);font-size:1.15rem}
+nav ul{display:flex;gap:1.25rem;list-style:none}
+nav a{
+  text-decoration:none;color:var(--text);font-weight:600;font-size:.95rem;
+}
+nav a:hover{color:var(--brand-1)}
+
+/*****  HERO  *****/
+.hero{
+  padding:5.5rem 1rem 4rem; /* extra top to clear fixed nav */
+  background:linear-gradient(135deg, var(--brand-1) 0%, #3e5f96 100%);
+  color:#fff;text-align:center;
+}
+.hero h1{font-size:2.65rem;margin-bottom:1rem}
+.hero p{max-width:640px;margin:0 auto 1.75rem;font-size:1.12rem}
+.hero .btn{
+  background:var(--brand-2);color:#fff;border:none;
+  padding:.65rem 1.4rem;font-size:1rem;
+  border-radius:30px;cursor:pointer;font-weight:600;
+  transition:opacity .25s;
+}
+.hero .btn:hover{opacity:.85}
+
+/*****  SECTIONS  *****/
+section{padding:4rem 1rem;max-width:1000px;margin:auto}
+section h2{
+  text-align:center;margin-bottom:2.25rem;
+  font-size:2rem;color:var(--brand-1);position:relative;
+}
+section h2::after{
+  content:"";display:block;width:140px;height:3px;background:var(--brand-2);
+  margin:12px auto 0;border-radius:2px;
+}
+/* two-column intro */
+.intro-grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.intro-grid .text p{margin-bottom:1rem}
+
+/* SHARED IMAGE STYLE */
+.sel-img{
+  width:100%;height:280px;object-fit:cover;border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
+  margin-bottom:1rem;
+}
+
+/* card groups */
+.card-group{
+  display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
+.card{
+  background:var(--card-bg);border-radius:12px;padding:1.8rem 1.6rem;
+  box-shadow:0 3px 10px rgba(0,0,0,.06);transition:transform .25s;
+}
+.card:hover{transform:translateY(-4px)}
+.card h3{color:var(--brand-2);margin-bottom:.9rem;font-size:1.1rem}
+.card ul{padding-left:1.1rem;margin-bottom:.7rem}
+.card ul li{margin:.45rem 0}
+
+/* self-reg blue callouts */
+.callout{
+  background:#e9f2ff;padding:1.4rem 1.2rem;border-left:4px solid var(--brand-1);
+  border-radius:8px;margin-bottom:1.4rem;
+}
+.callout h4{margin-bottom:.4rem;font-size:1rem;color:var(--brand-1)}
+
+.teach-list{margin-top:1.6rem}
+.teach-list li{margin:.55rem 0}
+
+/* family section tint */
+.family-band{background:var(--brand-3)}
+.family-band .card{background:#fff}
+
+/* references */
+.refs ul{margin-top:-.5rem;padding-left:1.25rem}
+.refs li{margin:.75rem 0;font-size:.94rem}
+
+/* footer */
+footer{
+  background:#f7f7f7;text-align:center;padding:2rem 1rem;font-size:.85rem;
+  color:#666;margin-top:4rem
+}
+
+/*****  RESPONSIVE tweaks *****/
+@media(max-width:600px){
+  .hero h1{font-size:2.2rem}
+  nav ul{gap:.85rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ========= NAV ========= -->
+<nav>
+  <div class="logo">SEL Education</div>
+  <ul>
+    <li><a href="#top">Home</a></li>
+    <li><a href="#early">Early Influences</a></li>
+    <li><a href="#stages">Developmental Stages</a></li>
+    <li><a href="#selfreg">Self-Regulation</a></li>
+    <li><a href="#family">Family Strategies</a></li>
+  </ul>
+</nav>
+
+<!-- ========= HERO ========= -->
+<header class="hero" id="top">
+  <h1>Supporting Social & Emotional Learning in the Classroom</h1>
+  <p>As educators, we play a crucial role in shaping children's social and emotional development. The skills children develop today will influence their relationships, academic success, and overall well-being throughout their lives.</p>
+  <button class="btn" onclick="location.href='#early'">Learn More</button>
+</header>
+
+<!-- ========= EARLY INFLUENCES ========= -->
+<section id="early">
+  <h2>Early Influences on Social/Emotional Growth</h2>
+  <div class="intro-grid">
+    <div class="text">
+      <p>The foundation for social and emotional development begins before birth and continues rapidly through early childhood. Prenatal factors such as maternal stress, nutrition, and exposure to toxins can influence a child's temperament and emotion-regulation capabilities.</p>
+      <p>During the first three years of life, children form attachment relationships that serve as templates for future social interactions. Secure attachments foster trust, empathy, and emotional security, while adverse experiences can disrupt healthy development.</p>
+      <p>These early experiences create neural pathways that affect how children respond to stress, form relationships, and regulate emotions throughout adolescence.</p>
+    </div>
+    <!-- real image already added -->
+    <img src="./child_development.jpg" alt="Child development illustration" class="sel-img">
+  </div>
+</section>
+
+<!-- ========= DEVELOPMENTAL STAGES ========= -->
+<section id="stages" style="background:var(--brand-4)">
+  <h2>Developmental Stages and Milestones</h2>
+  <div class="card-group">
+    <!-- Infancy -->
+    <div class="card">
+      <img src="./infancy_trust.jpg" alt="Infancy visual" class="sel-img">
+      <h3>Infancy (0-2 years)</h3>
+      <p><strong>Key Social/Emotional Milestones:</strong></p>
+      <ul>
+        <li>Forms attachment bonds with primary caregivers</li>
+        <li>Develops basic trust and security</li>
+        <li>Begins to express and recognize basic emotions</li>
+      </ul>
+      <p><strong>Classroom Strategies:</strong></p>
+      <ul>
+        <li>Maintain consistent caregiving routines to build security and trust</li>
+        <li>Use “serve and return” interactions—responding to babbling, gestures, and cries</li>
+      </ul>
+    </div>
+
+    <!-- Early Childhood -->
+    <div class="card">
+      <img src="./child_indepence.jpg" alt="Early-childhood visual" class="sel-img">
+      <h3>Early Childhood (3-5 years)</h3>
+      <p><strong>Key Social/Emotional Milestones:</strong></p>
+      <ul>
+        <li>Develops sense of self and independence</li>
+        <li>Begins cooperative play and sharing</li>
+        <li>Expresses more complex emotions and early empathy</li>
+      </ul>
+      <p><strong>Classroom Strategies:</strong></p>
+      <ul>
+        <li>Implement emotion-labeling activities and feelings charts</li>
+        <li>Create structured opportunities for cooperative play and problem-solving</li>
+      </ul>
+    </div>
+
+    <!-- Middle Childhood -->
+    <div class="card">
+      <img src="./kids_interacting.jpg" alt="Middle-childhood visual" class="sel-img">
+      <h3>Middle Childhood (6-11 years)</h3>
+      <p><strong>Key Social/Emotional Milestones:</strong></p>
+      <ul>
+        <li>Develops more complex friendships and peer relationships</li>
+        <li>Gains awareness of social rules and expectations</li>
+        <li>Develops more sophisticated emotion-regulation strategies</li>
+      </ul>
+      <p><strong>Classroom Strategies:</strong></p>
+      <ul>
+        <li>Implement collaborative projects that require negotiation and compromise</li>
+        <li>Teach conflict-resolution skills through role-playing and guided practice</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========= SELF-REGULATION ========= -->
+<section id="selfreg">
+  <h2>Self-Regulation in the Classroom</h2>
+
+  <!-- extra placeholder beside lead paragraph -->
+  <img src="./self_regulation.jpg" alt="Self-regulation banner" class="sel-img">
+
+  <p>Self-regulation refers to a child's ability to understand and manage their emotions, thoughts, and behaviors in different situations. It includes the capacity to calm down when upset, focus attention, adjust to changes, and control impulses. Strong self-regulation skills are linked to better academic performance, healthier relationships, and improved mental-health outcomes.</p>
+
+  <h3 style="margin:2.25rem 0 1rem;color:var(--brand-1)">Classroom Examples</h3>
+
+  <div class="callout">
+    <h4>Breathing Exercises</h4>
+    <p>Teach children simple breathing techniques like “balloon breathing” (deep belly breaths) or “five-finger breathing” (tracing fingers while breathing) to use when feeling overwhelmed or excited.</p>
+  </div>
+
+  <div class="callout">
+    <h4>Calm-Down Corner</h4>
+    <p>Create a designated space with comfort items, emotion cards, and sensory tools where children can go to regain emotional control before rejoining group activities.</p>
+  </div>
+
+  <div class="callout">
+    <h4>Emotion Thermometer</h4>
+    <p>Use visual scales to help children identify their emotional state and choose appropriate regulation strategies based on their “temperature.”</p>
+  </div>
+
+  <h3 style="margin:2.5rem 0 1rem;color:var(--brand-1)">How Teachers Can Model Self-Regulation</h3>
+  <ul class="teach-list">
+    <li><strong>Managing Frustration:</strong> Verbalize your own calm-down strategies when faced with challenges (“I'm feeling frustrated right now, so I'm going to take three deep breaths before we continue.”)</li>
+    <li><strong>Mindfulness Breaks:</strong> Lead brief mindfulness or stretching sessions to reset focus during transitions.</li>
+    <li><strong>Emotion Vocabulary:</strong> Frequently name and validate feelings (“It sounds like you're disappointed because recess ended.”)</li>
+  </ul>
+</section>
+
+<!-- ========= FAMILY STRATEGIES ========= -->
+<section id="family" class="family-band">
+  <h2>Family Strategies for Supporting SEL</h2>
+  <div class="card-group">
+    <div class="card">
+      <img src="./family_infant.jpg" alt="Family infant visual" class="sel-img">
+      <h3>For Infants (0-2 years)</h3>
+      <ul>
+        <li>Establish consistent daily routines for feeding, sleeping, and play</li>
+        <li>Respond promptly and warmly to cries and communication attempts</li>
+        <li>Narrate your actions and label emotions during daily interactions</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img src="family_childhood.jpg" alt="Family early childhood" class="sel-img">
+      <h3>For Early Childhood (3-5 years)</h3>
+      <ul>
+        <li>Create emotion check-in rituals using simple charts or pictures</li>
+        <li>Read books featuring characters experiencing different emotions</li>
+        <li>Practice turn-taking games and sharing activities at home</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img src="./family_meetings.jpg" alt="Family middle childhood" class="sel-img">
+      <h3>For Middle Childhood (6-11 years)</h3>
+      <ul>
+        <li>Hold family meetings to practise problem-solving and conflict resolution</li>
+        <li>Create a “feelings vocabulary” word wall to expand emotional literacy</li>
+        <li>Role-play challenging social scenarios and brainstorm responses together</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========= REFERENCES ========= -->
+<section class="refs">
+  <h2>References</h2>
+  <ul>
+    <li>Durkal, J. A., Weissberg, R. P., Dymnicki, A. B., Taylor, R. D., & Schellinger, K. B. (2011). The impact of enhancing students’ social and emotional learning: A meta-analysis of school-based universal interventions. <em>Child Development, 82</em>(1), 405-432.</li>
+    <li>Jones, D. E., Greenberg, M. T., & Crowley, M. (2015). Early social-emotional functioning and public health: The relationship between kindergarten social competence and future wellness. <em>American Journal of Public Health, 105</em>(11), 2283-2290.</li>
+    <li>Collaborative for Academic, Social, and Emotional Learning (CASEL). (2024). <em>Core SEL Competencies</em>. www.casel.org</li>
+  </ul>
+</section>
+
+<!-- ========= FOOTER ========= -->
+<footer>
+  © 2025 SEL Educator Project | Designed for GCU Coursework
+</footer>
+
+</body>
+</html>
